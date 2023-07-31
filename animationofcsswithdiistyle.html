@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    
+  <style>
+    p{
+        height:100px;
+        width: 100px;
+        background-color:red;
+        position: relative;
+        /* animation-name: colorchange;
+        animation-duration: 5s;
+        animation-delay: 2s;
+        position: relative;
+        animation-iteration-count: 2;
+        animation-direction: reverse;
+        animation-direction: alternate-reverse;
+        animation-fill-mode: forwards; */
+        animation: colorchange 8s linear 6s infinite reverse;
+    }
+    #ease{
+        animation-timing-function: ease;
+    }
+    #ease-in{
+        animation-timing-function:ease-in; 
+    }
+    #linear{
+        animation-timing-function: linear;
+    }
+    #ease-in-out{
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes colorchange{
+        0%{
+            top: 0px;
+            left:0px;
+            background-color: black;
+        }
+        25%{
+            top: 0px;
+            left: 200px;
+            background-color: blue;
+        }
+        50%{
+            top: 200px;
+            left: 200px;
+            background-color: green;
+        }
+        75%{
+            top: 200px;
+            right: 0px;
+            background-color: cyan;
+        }
+        100%{
+            top: 0px;
+            right: 0px;
+            background-color: springgreen;
+        }
+       
+}
+    
+  </style>
+</head>
+<body>
+  
+    <p id="ease">ease</p>
+    <p id="ease in">ease in</p>
+    <p id="linear">linear</p>
+    <p id="ease in out">ease in out</p>
+    This is going to animate
+    
+</body>
+</html>
